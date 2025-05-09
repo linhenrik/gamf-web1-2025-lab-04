@@ -5,7 +5,7 @@ export const getAll = (entity = 'users') => {
 };
 
 export const remove = (id = 0, entity = 'products') => {
-    return fetch(`${serverUrl}${entity}/${id}`, {
+    return fetch(apiUrl + entity + "/" + id, {
         method: 'DELETE',
     })
     .then( response => response.json() );
